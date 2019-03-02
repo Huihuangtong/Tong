@@ -4,7 +4,7 @@ def load_data(file):
    data = pd.read_csv(file)
    return data
    def get_rating(data, index):
-   '''返回第index这个人的电影的评分，返回类型是[]    '''
+   '''返回第index这个人的电影的评分，返回类型是[]'''
    result =[]
    result = data[data["user_id"]==index]["rating"].values
    return result
@@ -16,7 +16,7 @@ def load_data(file):
    sum = sum+ (rating_index[i]-rating_me[i])*(rating_index[i]-rating_me[i])
    return sqrt(sum)
    def get_distance_with_me(data, index):
-   '''获取第index人与我的距离    '''
+   '''获取第index人与我的距离'''
    # 1、获取index这个人的数据（电影的评分） [1, 2,,4,5]
 rating_index = []
 rating_me = []
